@@ -4292,7 +4292,34 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.SetPos,
 		C3.Plugins.Spritefont2.Exps.X,
 		C3.Plugins.Spritefont2.Exps.Y,
-		C3.Plugins.Sprite.Acts.SetInstanceVar
+		C3.Plugins.Sprite.Acts.SetInstanceVar,
+		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
+		C3.Plugins.Sprite.Cnds.CompareFrame,
+		C3.Plugins.Sprite.Acts.AddInstanceVar,
+		C3.Plugins.Sprite.Acts.SubInstanceVar,
+		C3.Plugins.Browser.Acts.GoToURLWindow,
+		C3.Plugins.System.Cnds.Else,
+		C3.Plugins.System.Exps.dt,
+		C3.Plugins.Sprite.Cnds.IsBoolInstanceVarSet,
+		C3.Plugins.TiledBg.Cnds.CompareInstanceVar,
+		C3.Plugins.Sprite.Acts.SetMirrored,
+		C3.Plugins.Sprite.Exps.X,
+		C3.Plugins.Sprite.Exps.Y,
+		C3.Plugins.AJAX.Acts.Post,
+		C3.Plugins.Json.Acts.Parse,
+		C3.Plugins.AJAX.Exps.LastData,
+		C3.Plugins.AJAX.Cnds.OnComplete,
+		C3.Plugins.Browser.Acts.ConsoleLog,
+		C3.Plugins.Json.Exps.ToBeautifiedString,
+		C3.Plugins.AJAX.Cnds.OnError,
+		C3.Plugins.Browser.Acts.GoToURL,
+		C3.Plugins.Keyboard.Cnds.OnKeyCode,
+		C3.Plugins.gamepad.Cnds.OnButtonIndexDown,
+		C3.Plugins.Touch.Cnds.OnTapGestureObject,
+		C3.Plugins.Sprite.Cnds.IsOverlapping,
+		C3.Plugins.System.Cnds.Repeat,
+		C3.Plugins.System.Exps.choose,
+		C3.Plugins.Json.Exps.Get
 	];
 };
 self.C3_JsPropNameTable = [
@@ -4458,7 +4485,36 @@ self.C3_JsPropNameTable = [
 	{Player1: 0},
 	{Player2: 0},
 	{Server_Game_Number: 0},
-	{AuthSuccess: 0}
+	{AuthSuccess: 0},
+	{Mapping_Key: 0},
+	{Gamepad_Controls: 0},
+	{P1_Throw_KB: 0},
+	{P1_Sprawl_KB: 0},
+	{P1_Takedown_KB: 0},
+	{P1_Throw_GP: 0},
+	{P1_Takedown_GP: 0},
+	{P2_Throw_KB: 0},
+	{P2_Sprawl_KB: 0},
+	{P2_Takedown_KB: 0},
+	{P2_Throw_GP: 0},
+	{P2_Takedown_GP: 0},
+	{Winner_Player1: 0},
+	{Winner_Player2: 0},
+	{Round_Number: 0},
+	{Game_State: 0},
+	{Side_Player1: 0},
+	{Side_Player2: 0},
+	{Ajax_Request: 0},
+	{Fight_Start: 0},
+	{Fight_End: 0},
+	{End_of_Round: 0},
+	{Fight_Time: 0},
+	{Time_Activated: 0},
+	{Server_Round_ID: 0},
+	{Round_Winner: 0},
+	{Win_Text_Player: 0},
+	{Win_Text: 0},
+	{StartSuccess: 0}
 ];
 }
 
@@ -4671,7 +4727,145 @@ self.C3_ExpressionFuncs = [
 		p => {
 			const n0 = p._GetNode(0);
 			return () => n0.ExpObject();
-		}
+		},
+		() => "Menu - Cursor Position",
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() - 12);
+		},
+		() => "Menu - Inputs",
+		() => "select",
+		() => "https://fantasyfightleague.live/wrestling22/leaderboard",
+		() => "NewWindow",
+		() => "option",
+		() => "credits",
+		() => "Menu - Code Entry",
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => (v0.GetValue() + "R");
+		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => (v0.GetValue() + "L");
+		},
+		() => 20,
+		() => "Menu - Menu Selection",
+		() => "Select - Initial Settings",
+		() => 0.6,
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() + 140);
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() + 0);
+		},
+		() => "authcheck",
+		() => "https://fantasyfightleague.live/api/wrestling22/auth-check",
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => ("token=" + v0.GetValue());
+		},
+		() => "POST",
+		() => "CLICK TO SELECT               CLICK AGAIN TO CONFIRM",
+		() => "CLIQUE PARA SELECIONAR",
+		() => "F TO SELECT               BACKSPACE RETURN TO MENU",
+		() => "F PARA SELECIONAR               BACKSPACE VOLTAR AO MENU",
+		() => "YIANNI",
+		() => "DEAN",
+		() => "SASSO",
+		() => "VITO",
+		() => "TEEMER",
+		() => 5,
+		() => "RIDGE",
+		() => 6,
+		() => "HIDLAY",
+		() => 7,
+		() => "GLORY",
+		() => "Login/Subscribe to Play",
+		() => "https://fantasyfightleague.live/login",
+		() => "Select - Positioning",
+		() => -1,
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => (v0.GetValue() - 1);
+		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => (v0.GetValue() - 2);
+		},
+		() => "Select - Inputs",
+		() => "menu",
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => (v0.GetValue() + 1);
+		},
+		() => "Select - After Selecting",
+		() => "Versus",
+		() => "versus",
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpInstVar() + 1);
+		},
+		() => 0.1,
+		() => 1.2,
+		() => "Select - Number of Fights",
+		() => "Select - Won Opponents",
+		() => "Defeated",
+		() => "Select - Animations",
+		p => {
+			const n0 = p._GetNode(0);
+			return () => and("anim_idle", n0.ExpInstVar());
+		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => and("anim_select", v0.GetValue());
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0(0, 1, 2);
+		},
+		() => "startofgame",
+		() => "https://fantasyfightleague.live/api/wrestling22/start-game",
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			const v1 = p._GetNode(1).GetVar();
+			const v2 = p._GetNode(2).GetVar();
+			const v3 = p._GetNode(3).GetVar();
+			return () => and((and((and((("token=" + v0.GetValue()) + "&game_type=pve&rounds_to_win="), v1.GetValue()) + "&player1_character="), (v2.GetValue() + 1)) + "&player2_character="), (v3.GetValue() + 1));
+		},
+		() => "game",
+		() => "EndBattle",
+		() => "loser",
+		() => "...........",
+		p => {
+			const n0 = p._GetNode(0);
+			return () => n0.ExpObject("data.game_data.id");
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => n0.ExpObject("data.new_token");
+		},
+		() => "https://fantasyfightleague.live/nocredits",
+		() => "Versus - Texts",
+		() => "YIANNI WINS!",
+		() => "DEAN WINS!",
+		() => "SASSO WINS!",
+		() => "VITO WINS!",
+		() => "TEEMER WINS!",
+		() => "RIDGE WINS!",
+		() => "HIDLAY WINS!",
+		() => "GLORY WINS!",
+		() => "RED FINAL WIN EN",
+		() => "YELLOW FINAL WIN EN",
+		() => "GREEN FINAL WIN EN",
+		() => "BLUE FINAL WIN EN",
+		() => "WHITE FINAL WIN EN",
+		() => "RED FINAL WIN BR",
+		() => "YELLOW FINAL WIN BR",
+		() => "GREEN FINAL WIN BR",
+		() => "BLUE FINAL WIN BR",
+		() => "WHITE FINAL WIN BR"
 ];
 
 
