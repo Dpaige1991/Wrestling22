@@ -4243,7 +4243,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Mouse,
 		C3.Plugins.Text,
 		C3.Plugins.System.Cnds.OnLayoutStart,
-		C3.Plugins.Sprite.Acts.SetAnimFrame,
+		C3.Behaviors.Flash.Acts.Flash,
+		C3.Plugins.System.Acts.SetLayerVisible,
 		C3.Plugins.System.Acts.CreateObject,
 		C3.Plugins.TiledBg.Acts.SetSize,
 		C3.Plugins.System.Exps.layoutwidth,
@@ -4251,75 +4252,127 @@ self.C3_GetObjectRefTable = function () {
 		C3.Behaviors.Fade.Acts.SetFadeOutTime,
 		C3.Behaviors.Fade.Acts.StartFade,
 		C3.Plugins.System.Cnds.CompareVar,
-		C3.Plugins.Browser.Acts.RequestFullScreen,
-		C3.Plugins.Browser.Acts.LockOrientation,
 		C3.Plugins.Spritefont2.Acts.SetText,
-		C3.Plugins.Touch.Cnds.OnTouchObject,
-		C3.Plugins.Audio.Acts.Play,
-		C3.Plugins.System.Acts.SetLayerVisible,
-		C3.Behaviors.Fade.Acts.SetFadeInTime,
-		C3.Plugins.TiledBg.Acts.SetInstanceVar,
-		C3.Plugins.System.Acts.SetVar,
-		C3.Plugins.System.Cnds.EveryTick,
-		C3.Plugins.Spritefont2.Cnds.CompareInstanceVar,
-		C3.Plugins.System.Cnds.LayerVisible,
-		C3.Plugins.Keyboard.Cnds.OnKey,
-		C3.Plugins.gamepad.Cnds.CompareAxis,
-		C3.Plugins.System.Cnds.TriggerOnce,
-		C3.Plugins.System.Acts.AddVar,
-		C3.Plugins.System.Acts.SubVar,
-		C3.Plugins.gamepad.Cnds.OnButtonDown,
-		C3.Plugins.System.Acts.SetBoolVar,
-		C3.Plugins.System.Cnds.ForEach,
-		C3.Plugins.System.Cnds.Compare,
-		C3.Plugins.Sprite.Acts.SetPosToObject,
 		C3.Behaviors.Fade.Cnds.OnFadeOutEnd,
 		C3.Behaviors.Fade.Cnds.OnFadeInEnd,
-		C3.Plugins.System.Cnds.CompareBoolVar,
-		C3.Plugins.System.Acts.Wait,
-		C3.Plugins.Text.Acts.SetText,
 		C3.Plugins.System.Acts.GoToLayout,
-		C3.Plugins.System.Cnds.IsGroupActive,
-		C3.Plugins.Spritefont2.Acts.SetVisible,
-		C3.Behaviors.Flash.Acts.Flash,
-		C3.Plugins.Spritefont2.Acts.SetHAlign,
-		C3.Plugins.Sprite.Acts.SetAnim,
-		C3.Plugins.Sprite.Acts.SetVisible,
-		C3.Plugins.Sprite.Acts.SetBoolInstanceVar,
-		C3.Plugins.Audio.Acts.StopAll,
 		C3.Behaviors.Flash.Cnds.OnFlashEnded,
 		C3.Plugins.Touch.Cnds.OnTouchStart,
+		C3.Plugins.System.Acts.Wait,
+		C3.Behaviors.Fade.Acts.SetFadeInTime,
+		C3.Plugins.TiledBg.Acts.SetInstanceVar,
+		C3.Plugins.Keyboard.Cnds.OnKey,
+		C3.Plugins.gamepad.Cnds.OnButtonDown,
+		C3.Plugins.Sprite.Acts.SetAnimFrame,
+		C3.Plugins.System.Acts.SetVar,
 		C3.Plugins.Sprite.Acts.SetPos,
 		C3.Plugins.Spritefont2.Exps.X,
 		C3.Plugins.Spritefont2.Exps.Y,
 		C3.Plugins.Sprite.Acts.SetInstanceVar,
+		C3.Plugins.Sprite.Acts.SetBoolInstanceVar,
+		C3.Plugins.System.Cnds.TriggerOnce,
+		C3.Plugins.Audio.Acts.StopAll,
+		C3.Plugins.System.Cnds.IsGroupActive,
 		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
+		C3.Plugins.System.Cnds.LayerVisible,
 		C3.Plugins.Sprite.Cnds.CompareFrame,
+		C3.Plugins.gamepad.Cnds.CompareAxis,
 		C3.Plugins.Sprite.Acts.AddInstanceVar,
+		C3.Plugins.Audio.Acts.Play,
 		C3.Plugins.Sprite.Acts.SubInstanceVar,
 		C3.Plugins.Browser.Acts.GoToURLWindow,
+		C3.Plugins.Touch.Cnds.OnTouchObject,
+		C3.Plugins.Browser.Acts.RequestFullScreen,
+		C3.Plugins.Browser.Acts.LockOrientation,
 		C3.Plugins.System.Cnds.Else,
+		C3.Plugins.System.Cnds.EveryTick,
+		C3.Plugins.System.Acts.SubVar,
 		C3.Plugins.System.Exps.dt,
 		C3.Plugins.Sprite.Cnds.IsBoolInstanceVarSet,
 		C3.Plugins.TiledBg.Cnds.CompareInstanceVar,
-		C3.Plugins.Sprite.Acts.SetMirrored,
-		C3.Plugins.Sprite.Exps.X,
-		C3.Plugins.Sprite.Exps.Y,
+		C3.Plugins.Spritefont2.Acts.SetVisible,
+		C3.Plugins.Spritefont2.Acts.SetHAlign,
+		C3.Plugins.Sprite.Acts.SetAnim,
+		C3.Plugins.Sprite.Acts.SetVisible,
+		C3.Plugins.System.Cnds.CompareBoolVar,
+		C3.Plugins.System.Acts.SetBoolVar,
+		C3.Plugins.Spritefont2.Cnds.CompareInstanceVar,
+		C3.Plugins.System.Cnds.ForEach,
+		C3.Plugins.Sprite.Acts.SetSize,
+		C3.Plugins.Spritefont2.Exps.Width,
+		C3.Plugins.Spritefont2.Exps.Height,
+		C3.Plugins.Touch.Cnds.OnTapGestureObject,
+		C3.Plugins.System.Acts.AddVar,
+		C3.Plugins.System.Exps.choose,
 		C3.Plugins.AJAX.Acts.Post,
 		C3.Plugins.Json.Acts.Parse,
 		C3.Plugins.AJAX.Exps.LastData,
 		C3.Plugins.AJAX.Cnds.OnComplete,
 		C3.Plugins.Browser.Acts.ConsoleLog,
 		C3.Plugins.Json.Exps.ToBeautifiedString,
+		C3.Plugins.Json.Exps.Get,
 		C3.Plugins.AJAX.Cnds.OnError,
-		C3.Plugins.Browser.Acts.GoToURL,
+		C3.Plugins.System.Cnds.Compare,
+		C3.Plugins.Sprite.Acts.SetPosToObject,
+		C3.Plugins.Text.Acts.SetText,
+		C3.Plugins.Sprite.Acts.SetMirrored,
+		C3.Plugins.Sprite.Exps.X,
+		C3.Plugins.Sprite.Exps.Y,
 		C3.Plugins.Keyboard.Cnds.OnKeyCode,
 		C3.Plugins.gamepad.Cnds.OnButtonIndexDown,
-		C3.Plugins.Touch.Cnds.OnTapGestureObject,
 		C3.Plugins.Sprite.Cnds.IsOverlapping,
 		C3.Plugins.System.Cnds.Repeat,
-		C3.Plugins.System.Exps.choose,
-		C3.Plugins.Json.Exps.Get
+		C3.Behaviors.Flash.Cnds.IsFlashing,
+		C3.Plugins.Keyboard.Cnds.OnAnyKey,
+		C3.Plugins.Keyboard.Cnds.IsKeyDown,
+		C3.Plugins.Keyboard.Exps.LastKeyCode,
+		C3.Behaviors.Flash.Acts.StopFlashing,
+		C3.Plugins.gamepad.Cnds.OnAnyButtonDown,
+		C3.Plugins.gamepad.Exps.LastButton,
+		C3.Plugins.gamepad.Cnds.HasGamepads,
+		C3.Plugins.System.Exps.uppercase,
+		C3.Plugins.Keyboard.Exps.StringFromKeyCode,
+		C3.Plugins.Browser.Exps.QueryParam,
+		C3.Plugins.Mouse.Cnds.OnAnyClick,
+		C3.Behaviors.Pin.Acts.PinByProperties,
+		C3.Plugins.Sprite.Cnds.IsOverlappingOffset,
+		C3.Behaviors.Platform.Acts.SimulateControl,
+		C3.Plugins.System.Exps.random,
+		C3.Plugins.Sprite.Cnds.OnAnimFinished,
+		C3.Behaviors.Pin.Acts.Pin,
+		C3.Behaviors.scrollto.Acts.SetEnabled,
+		C3.Plugins.Spritefont2.Acts.SetBoolInstanceVar,
+		C3.Plugins.Spritefont2.Acts.SetInstanceVar,
+		C3.Plugins.Sprite.Acts.Destroy,
+		C3.Plugins.Json.Cnds.ForEach,
+		C3.Plugins.Json.Cnds.CompareValue,
+		C3.Behaviors.Platform.Cnds.IsOnFloor,
+		C3.Plugins.Touch.Cnds.IsTouchingObject,
+		C3.Plugins.Sprite.Cnds.IsAnimPlaying,
+		C3.Plugins.Sprite.Cnds.CompareX,
+		C3.Plugins.Keyboard.Cnds.OnKeyReleased,
+		C3.Plugins.Sprite.Acts.SetX,
+		C3.Plugins.Sprite.Exps.ImagePointX,
+		C3.Plugins.Sprite.Exps.ImagePointY,
+		C3.Behaviors.Platform.Cnds.OnLand,
+		C3.Behaviors.Platform.Acts.SetMaxSpeed,
+		C3.Plugins.System.Exps.viewportleft,
+		C3.Plugins.System.Exps.viewportright,
+		C3.Plugins.TiledBg.Acts.SetWidth,
+		C3.Plugins.TiledBg.Exps.Width,
+		C3.Plugins.Sprite.Acts.SetOpacity,
+		C3.Plugins.Sprite.Acts.MoveToBottom,
+		C3.Plugins.Sprite.Acts.MoveToTop,
+		C3.Plugins.System.Acts.SetTimescale,
+		C3.Behaviors.Platform.Acts.SetVectorY,
+		C3.Behaviors.Platform.Acts.SetVectorX,
+		C3.Plugins.System.Cnds.Every,
+		C3.Plugins.Spritefont2.Cnds.IsBoolInstanceVarSet,
+		C3.Plugins.System.Acts.RestartLayout,
+		C3.Behaviors.Sin.Cnds.IsEnabled,
+		C3.Behaviors.Sin.Acts.SetEnabled,
+		C3.Behaviors.Pin.Acts.Unpin,
+		C3.Behaviors.Tween.Acts.TweenOneProperty
 	];
 };
 self.C3_JsPropNameTable = [
@@ -4487,6 +4540,7 @@ self.C3_JsPropNameTable = [
 	{Server_Game_Number: 0},
 	{AuthSuccess: 0},
 	{Mapping_Key: 0},
+	{Mapping_Key2: 0},
 	{Gamepad_Controls: 0},
 	{P1_Throw_KB: 0},
 	{P1_Sprawl_KB: 0},
@@ -4498,6 +4552,9 @@ self.C3_JsPropNameTable = [
 	{P2_Takedown_KB: 0},
 	{P2_Throw_GP: 0},
 	{P2_Takedown_GP: 0},
+	{throw_damage: 0},
+	{takedown_damage: 0},
+	{State_AI_Player2: 0},
 	{Winner_Player1: 0},
 	{Winner_Player2: 0},
 	{Round_Number: 0},
@@ -4514,7 +4571,8 @@ self.C3_JsPropNameTable = [
 	{Round_Winner: 0},
 	{Win_Text_Player: 0},
 	{Win_Text: 0},
-	{StartSuccess: 0}
+	{StartSuccess: 0},
+	{Action_Time: 0}
 ];
 }
 
@@ -4615,50 +4673,74 @@ function or(l, r)
 }
 
 self.C3_ExpressionFuncs = [
-		() => 0,
-		() => "Elements",
-		() => -100,
-		() => "",
+		() => 0.3,
+		() => 0.9,
 		() => "Fade",
+		() => 0,
+		() => "",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0();
 		},
 		() => 0.5,
-		() => "mobile",
-		() => "TAP ICON TO PLAY",
 		() => "desktop",
-		() => "CLICK ENTER TO PLAY",
-		() => -10,
-		() => "start",
 		() => 1,
-		() => "HOW TO PLAY\n\nON MENUS - AWSD/awsd TO SELECT\nENTER TO CONFIRM",
+		() => "ENTER TO RETURN TO MENU",
+		() => "CREDITS",
+		() => "A GAME BY\nFANTASY FIGHT LEAGUE\n\nGAME DEVELOPMENT BY\nGTN AND JOSHUA LYONS\n\nART BY\nSUHIBARTIST\n\nVOICES BY\nKENNEY:NL VOICEOVER PACK\nFREESOUND:ORG",
 		() => 2,
-		() => "A/D - MOVE LEFT/RIGHT\n\nF - THROW\n\nG - TAKEDOWN\n\nS - CROUCH\n\nW - SPRAWL",
-		() => "HOW TO PLAY\n\nON MENUS - CLICK TO SELECT\nCLICK AGAIN TO CONFIRM",
-		() => "PLAYER 1\n\nUSE OVERLAY TO:\nMOVE LEFT / RIGHT\nCROUCH / SPRAWL\nTHROW / TAKEDOWN",
-		() => 50,
-		() => -50,
+		() => "ENTER PARA VOLTAR",
+		() => "CRÉDITOS",
+		() => "ARTE E PROGRAMAÇÃO:\nJOSHUA LYONS\n\nEFEITOS SONOROS:\nHTTPS://OPENGAMEART.ORG/\nCONTENT/37-HITSPUNCHES\n\nVOZES:\nHTTPS://KENNEY.NL/\nASSETS/VOICEOVER-PACK\n\nHTTPS://FREESOUND.ORG/PEOPLE/\nPYRO13DJT/SOUNDS/338223/",
+		() => "mobile",
+		() => "TAP ANYWHERE TO RETURN TO MENU",
+		() => "TOQUE EM QUALQUER LUGAR PARA VOLTAR AO MENU",
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => v0.GetValue();
 		},
+		() => 10,
+		() => "Elements",
+		() => -30,
 		p => {
 			const n0 = p._GetNode(0);
-			return () => n0.ExpInstVar();
+			return () => n0.ExpObject();
 		},
-		() => 0.25,
-		() => "Next Scene",
+		() => "Menu - Cursor Position",
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() - 12);
+		},
+		() => 3,
+		() => 4,
+		() => "Menu - Inputs",
+		() => 50,
+		() => -10,
+		() => -50,
+		() => "select",
+		() => "https://fantasyfightleague.live/wrestling22/leaderboard",
+		() => "NewWindow",
+		() => "option",
+		() => "credits",
+		() => "Menu - Code Entry",
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => (v0.GetValue() + "R");
+		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => (v0.GetValue() + "L");
+		},
+		() => 20,
+		() => "start",
+		() => "Menu - Menu Selection",
 		() => "Open/Ending - Cutscenes",
 		() => "opening",
-		() => 0.3,
-		() => 0.9,
 		() => "TAP TO SKIP",
 		() => "TOCAR PARA PULAR",
 		() => "ENTER TO SKIP",
 		() => "INGRESAR PARA PULAR",
 		() => "Open",
-		() => 3,
 		() => 99,
 		() => "intro",
 		() => "Intro",
@@ -4686,7 +4768,6 @@ self.C3_ExpressionFuncs = [
 		() => "BLUE ENDING 3 EN",
 		() => "BLUE INTRO 1 EN",
 		() => "BLUE INTRO 2 EN",
-		() => 4,
 		() => "WHITE ENDING 1 EN",
 		() => "WHITE ENDING 2 EN",
 		() => "WHITE ENDING 3 EN",
@@ -4722,109 +4803,42 @@ self.C3_ExpressionFuncs = [
 		() => "Wrestling 22",
 		() => "\nOBRIGADO POR\nJOGAR!",
 		() => "Open/Ending - Audio",
-		() => 10,
-		() => -30,
+		() => "Open/Ending - Cutscenes2",
+		() => "Open/Ending - After Scenes2",
+		() => "Open/Ending - Texts2",
+		() => "Open/Ending - Audio2",
+		() => "time",
+		() => "language",
+		() => "rounds",
+		() => "Options - Texts",
+		() => "OPTIONS",
+		() => "BACK",
+		() => "TIME:",
+		() => "LANGUAGE:",
+		() => "MUSIC SELECT:",
+		() => "ADMIN CONTROLS",
+		() => "KEY CONFIG",
+		() => "OPÇÕES",
+		() => "VOLTAR",
+		() => "TEMPO:",
+		() => "IDIOMA:",
+		() => "OUVIR MÚSICA:",
+		() => "CONFIG. TECLAS",
+		() => "Options - Selector Boxes",
 		p => {
 			const n0 = p._GetNode(0);
-			return () => n0.ExpObject();
+			return () => n0.ExpInstVar();
 		},
-		() => "Menu - Cursor Position",
-		p => {
-			const n0 = p._GetNode(0);
-			return () => (n0.ExpObject() - 12);
-		},
-		() => "Menu - Inputs",
-		() => "select",
-		() => "https://fantasyfightleague.live/wrestling22/leaderboard",
-		() => "NewWindow",
-		() => "option",
-		() => "credits",
-		() => "Menu - Code Entry",
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => (v0.GetValue() + "R");
-		},
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => (v0.GetValue() + "L");
-		},
-		() => 20,
-		() => "Menu - Menu Selection",
-		() => "Select - Initial Settings",
-		() => 0.6,
-		p => {
-			const n0 = p._GetNode(0);
-			return () => (n0.ExpObject() + 140);
-		},
-		p => {
-			const n0 = p._GetNode(0);
-			return () => (n0.ExpObject() + 0);
-		},
-		() => "authcheck",
-		() => "https://fantasyfightleague.live/api/wrestling22/auth-check",
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => ("token=" + v0.GetValue());
-		},
-		() => "POST",
-		() => "CLICK TO SELECT               CLICK AGAIN TO CONFIRM",
-		() => "CLIQUE PARA SELECIONAR",
-		() => "F TO SELECT               BACKSPACE RETURN TO MENU",
-		() => "F PARA SELECIONAR               BACKSPACE VOLTAR AO MENU",
-		() => "YIANNI",
-		() => "DEAN",
-		() => "SASSO",
-		() => "VITO",
-		() => "TEEMER",
+		() => "Options - Cursor Position",
 		() => 5,
-		() => "RIDGE",
-		() => 6,
-		() => "HIDLAY",
-		() => 7,
-		() => "GLORY",
-		() => "Login/Subscribe to Play",
-		() => "https://fantasyfightleague.live/login",
-		() => "Select - Positioning",
-		() => -1,
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => (v0.GetValue() - 1);
-		},
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => (v0.GetValue() - 2);
-		},
-		() => "Select - Inputs",
-		() => "menu",
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => (v0.GetValue() + 1);
-		},
-		() => "Select - After Selecting",
-		() => "Versus",
-		() => "versus",
-		p => {
-			const n0 = p._GetNode(0);
-			return () => (n0.ExpInstVar() + 1);
-		},
-		() => 0.1,
-		() => 1.2,
-		() => "Select - Number of Fights",
-		() => "Select - Won Opponents",
-		() => "Defeated",
-		() => "Select - Animations",
-		p => {
-			const n0 = p._GetNode(0);
-			return () => and("anim_idle", n0.ExpInstVar());
-		},
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => and("anim_select", v0.GetValue());
-		},
+		() => 60,
+		() => 30,
+		() => "Options - Inputs",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0(0, 1, 2);
 		},
+		() => "Versus",
 		() => "startofgame",
 		() => "https://fantasyfightleague.live/api/wrestling22/start-game",
 		p => {
@@ -4834,10 +4848,23 @@ self.C3_ExpressionFuncs = [
 			const v3 = p._GetNode(3).GetVar();
 			return () => and((and((and((("token=" + v0.GetValue()) + "&game_type=pve&rounds_to_win="), v1.GetValue()) + "&player1_character="), (v2.GetValue() + 1)) + "&player2_character="), (v3.GetValue() + 1));
 		},
+		() => "POST",
+		() => "YIANNI",
+		() => "DEAN",
+		() => "SASSO",
+		() => "VITO",
+		() => "TEEMER",
+		() => "RIDGE",
+		() => 6,
+		() => "HIDLAY",
+		() => 7,
+		() => "GLORY",
 		() => "game",
 		() => "EndBattle",
 		() => "loser",
+		() => "menu",
 		() => "...........",
+		() => 0.1,
 		p => {
 			const n0 = p._GetNode(0);
 			return () => n0.ExpObject("data.game_data.id");
@@ -4846,7 +4873,6 @@ self.C3_ExpressionFuncs = [
 			const n0 = p._GetNode(0);
 			return () => n0.ExpObject("data.new_token");
 		},
-		() => "https://fantasyfightleague.live/nocredits",
 		() => "Versus - Texts",
 		() => "YIANNI WINS!",
 		() => "DEAN WINS!",
@@ -4865,7 +4891,799 @@ self.C3_ExpressionFuncs = [
 		() => "YELLOW FINAL WIN BR",
 		() => "GREEN FINAL WIN BR",
 		() => "BLUE FINAL WIN BR",
-		() => "WHITE FINAL WIN BR"
+		() => "WHITE FINAL WIN BR",
+		() => -100,
+		() => "TAP ICON TO PLAY",
+		() => "CLICK ENTER TO PLAY",
+		() => "HOW TO PLAY\n\nON MENUS - AWSD/awsd TO SELECT\nENTER TO CONFIRM",
+		() => "A/D - MOVE LEFT/RIGHT\n\nF - THROW\n\nG - TAKEDOWN\n\nS - CROUCH\n\nW - SPRAWL",
+		() => "HOW TO PLAY\n\nON MENUS - CLICK TO SELECT\nCLICK AGAIN TO CONFIRM",
+		() => "PLAYER 1\n\nUSE OVERLAY TO:\nMOVE LEFT / RIGHT\nCROUCH / SPRAWL\nTHROW / TAKEDOWN",
+		() => "Done",
+		() => "Select - Initial Settings",
+		() => 0.6,
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() + 140);
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() + 0);
+		},
+		() => "authcheck",
+		() => "https://fantasyfightleague.live/api/wrestling22/auth-check",
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => ("token=" + v0.GetValue());
+		},
+		() => "CLICK TO SELECT               CLICK AGAIN TO CONFIRM",
+		() => "CLIQUE PARA SELECIONAR",
+		() => "F TO SELECT               BACKSPACE RETURN TO MENU",
+		() => "F PARA SELECIONAR               BACKSPACE VOLTAR AO MENU",
+		() => "Select - Positioning",
+		() => -1,
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => (v0.GetValue() - 1);
+		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => (v0.GetValue() - 2);
+		},
+		() => "Select - Inputs",
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => (v0.GetValue() + 1);
+		},
+		() => "Select - After Selecting",
+		() => "versus",
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpInstVar() + 1);
+		},
+		() => 1.2,
+		() => "Select - Number of Fights",
+		() => "Select - Won Opponents",
+		() => "Defeated",
+		() => "Select - Animations",
+		p => {
+			const n0 = p._GetNode(0);
+			return () => and("anim_idle", n0.ExpInstVar());
+		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => and("anim_select", v0.GetValue());
+		},
+		() => "GAMEPAD (OFF)",
+		() => "GAMEPAD (ON)",
+		() => "Config - Texts",
+		() => "THROW",
+		() => "TAKEDOWN",
+		() => "SOCO",
+		() => "CHUTE",
+		() => "Config - Cursor Position",
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() - 23);
+		},
+		() => "Config - Inputs",
+		() => 999,
+		() => 0.01,
+		() => "Config - Mapping Keys",
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0(0);
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0(1);
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			const f1 = p._GetNode(1).GetBoundMethod();
+			const v2 = p._GetNode(2).GetVar();
+			return () => f0(f1(v2.GetValue()));
+		},
+		() => 70,
+		() => 71,
+		() => 78,
+		() => 77,
+		() => 48,
+		() => 105,
+		() => 65,
+		() => 68,
+		() => 83,
+		() => 87,
+		() => "TAP ANYWHERE OR ENTER TO BEGIN",
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("token");
+		},
+		() => "splash",
+		() => "Config - Texts2",
+		() => "THROW DAMAGE:",
+		() => "TAKEDOWN DAMAGE:",
+		() => "Config - Cursor Position2",
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() - 26);
+		},
+		() => "Config - Inputs2",
+		() => "Config - Mapping Keys2",
+		() => "normal",
+		() => "takedown",
+		() => "throw",
+		() => "damage",
+		() => 0.25,
+		() => "compare_distance",
+		p => {
+			const n0 = p._GetNode(0);
+			const n1 = p._GetNode(1);
+			const n2 = p._GetNode(2);
+			const n3 = p._GetNode(3);
+			return () => C3.distanceTo(n0.ExpObject(), n1.ExpObject(), n2.ExpObject(), n3.ExpObject());
+		},
+		() => 220,
+		() => "approach",
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("throwing", "throwing", "throwing", "throwing", "throwing", "throwing", "takedowns", "takedowns", "takedowns", "takedowns", "takedowns", "stay_away", "stay_away");
+		},
+		() => "moving",
+		() => "left",
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() - 60);
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() - 255);
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() + 60);
+		},
+		() => "right",
+		() => "R",
+		() => "L",
+		() => -3,
+		() => "stay_away",
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0(0.7, 1.2);
+		},
+		() => "idle",
+		() => "throwing",
+		() => "crouch",
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("success", "success", "success", "success", "success", "success", "success", "success", "success", "success", "success", "success", "success", "fail", "fail", "fail", "fail", "fail", "fail", "fail");
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("success", "success", "success", "success", "success", "success", "success", "success", "success", "success", "success", "fail", "fail", "fail", "fail", "fail", "fail", "fail", "fail", "fail");
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("success", "success", "success", "success", "success", "success", "success", "success", "success", "success", "fail", "fail", "fail", "fail", "fail", "fail", "fail", "fail", "fail", "fail");
+		},
+		() => "takedowns",
+		() => "sprawl",
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("success", "success", "success", "success", "success", "success", "success", "success", "success", "success", "success", "success", "success", "success", "success", "success", "fail", "fail", "fail", "fail");
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("success", "success", "success", "success", "success", "success", "success", "success", "success", "success", "success", "success", "success", "success", "fail", "fail", "fail", "fail", "fail", "fail");
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("success", "success", "success", "success", "success", "success", "success", "success", "success", "success", "success", "success", "success", "success", "success", "fail", "fail", "fail", "fail", "fail");
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("success", "success", "success", "success", "success", "success", "success", "success", "success", "success", "success", "success", "fail", "fail", "fail", "fail", "fail", "fail", "fail", "fail");
+		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			const v1 = p._GetNode(1).GetVar();
+			return () => and((and("anim_fail_throw_headlock", v0.GetValue()) + "_"), v1.GetValue());
+		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			const v1 = p._GetNode(1).GetVar();
+			return () => and((and("anim_fail_takedown_flip", v0.GetValue()) + "_"), v1.GetValue());
+		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			const v1 = p._GetNode(1).GetVar();
+			return () => and((and("anim_takedown_singleleg", v0.GetValue()) + "_"), v1.GetValue());
+		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			const v1 = p._GetNode(1).GetVar();
+			return () => and((and("anim_takedown_low", v0.GetValue()) + "_"), v1.GetValue());
+		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			const v1 = p._GetNode(1).GetVar();
+			return () => and((and("anim_takedown_flip", v0.GetValue()) + "_"), v1.GetValue());
+		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			const v1 = p._GetNode(1).GetVar();
+			return () => and((and("anim_throw_special", v0.GetValue()) + "_"), v1.GetValue());
+		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			const v1 = p._GetNode(1).GetVar();
+			return () => and((and("anim_throw_body", v0.GetValue()) + "_"), v1.GetValue());
+		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => and("anim_approach", v0.GetValue());
+		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => and("anim_away", v0.GetValue());
+		},
+		() => 0.2,
+		() => "here",
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("throwing", "throwing", "throwing", "throwing", "throwing", "throwing", "takedowns", "takedowns", "takedowns", "takedowns", "takedowns", "stay_away");
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0(0.5, 1.5);
+		},
+		() => "Game - Initial Setup2",
+		() => "Characters",
+		() => 915,
+		() => 403,
+		() => 163,
+		() => 301,
+		() => 1318,
+		() => "Start1",
+		() => "Solids",
+		() => "startofround",
+		() => "https://fantasyfightleague.live/api/wrestling22/start-round",
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			const v1 = p._GetNode(1).GetVar();
+			const v2 = p._GetNode(2).GetVar();
+			const v3 = p._GetNode(3).GetVar();
+			return () => and((and((and((("token=" + v0.GetValue()) + "&wrestling_game_record_id="), v1.GetValue()) + "&round_number="), v2.GetValue()) + "&round_time="), v3.GetValue());
+		},
+		() => 1.7,
+		() => 1.5,
+		() => "--",
+		() => "BG",
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => and("Stage", v0.GetValue());
+		},
+		() => "START OF ROUND",
+		() => "data.game_data.rounds",
+		() => ".round_number",
+		p => {
+			const n0 = p._GetNode(0);
+			return () => n0.ExpObject(".id");
+		},
+		() => "Game - Audio2",
+		() => "Game - Character Controls2",
+		() => "Game - Movement Player 3",
+		() => "lose",
+		() => "success",
+		() => "win",
+		() => "special",
+		() => "falling",
+		() => "DB",
+		() => "B",
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => and("anim_fall", v0.GetValue());
+		},
+		() => "D",
+		() => "crouch_damage",
+		() => "Game - Movement Player 4",
+		() => "Game - Compare Positions2",
+		() => 175,
+		() => -7,
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() - 15);
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() + 15);
+		},
+		() => "Game - Damage System2",
+		() => "Game - Attack Player 3",
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() - 200);
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("success", "success", "success", "success", "success", "success", "success", "success", "success", "fail", "fail", "fail", "fail", "fail", "fail", "fail", "fail", "fail", "fail", "fail");
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("success", "success", "success", "success", "success", "success", "success", "success", "fail", "fail", "fail", "fail", "fail", "fail", "fail", "fail", "fail", "fail", "fail", "fail");
+		},
+		() => "Game - Attack Player 4",
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() + 200);
+		},
+		() => "Game - Damage (P1 on P2)2",
+		p => {
+			const n0 = p._GetNode(0);
+			return () => n0.ExpObject(1);
+		},
+		() => "Hit",
+		() => "fail",
+		() => 450,
+		() => "Game - Damage (P2 on P1)2",
+		() => "Game - Camera & HP Bars2",
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => (f0() / 2);
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			const n1 = p._GetNode(1);
+			const f2 = p._GetNode(2).GetBoundMethod();
+			return () => C3.lerp(n0.ExpObject(), ((n1.ExpInstVar() / 100) * 456), (5 * f2()));
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() + 5);
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() - 5);
+		},
+		() => 656,
+		() => 130,
+		() => 24,
+		() => "Game - End of Round2",
+		() => -450,
+		() => 900,
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() - 1);
+		},
+		() => -900,
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() + 1);
+		},
+		() => "End",
+		() => "Game - Time Limit2",
+		() => "TIME OVER!",
+		() => "Game - Progression2",
+		() => "Game - Start of Fight2",
+		() => "FINAL ROUND",
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => and("ROUND ", v0.GetValue());
+		},
+		() => "Ready",
+		() => "READY...",
+		() => "Go",
+		() => "GO!",
+		() => "Fight",
+		() => "Game - Win & Lose2",
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => and("anim_win", v0.GetValue());
+		},
+		() => "YOU WIN!",
+		() => "p1",
+		() => "YOU LOSE!",
+		() => "p2",
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => and("anim_lose", v0.GetValue());
+		},
+		() => "IT'S A TIE!",
+		() => "tie",
+		() => "PLAYER 1 WIN!",
+		() => "PLAYER 2 WIN!",
+		() => "Game - End of Fight2",
+		() => "endofround",
+		() => "https://fantasyfightleague.live/api/wrestling22/end-round",
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			const v1 = p._GetNode(1).GetVar();
+			const v2 = p._GetNode(2).GetVar();
+			const v3 = p._GetNode(3).GetVar();
+			return () => and((((and((("token=" + v0.GetValue()) + "&wrestling_game_round_id="), v1.GetValue()) + "&winner=") + v2.GetValue()) + "&round_time_remaining="), v3.GetValue());
+		},
+		() => "END OF ROUND",
+		() => "Game - Round Sounds2",
+		() => "Game - Fade & Shake Screen2",
+		() => "Game - Animations2",
+		() => "Game - Animations Player 3",
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => and("anim_idle", v0.GetValue());
+		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => and("anim_crouch", v0.GetValue());
+		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => and("anim_sprawl", v0.GetValue());
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			const v1 = p._GetNode(1).GetVar();
+			const v2 = p._GetNode(2).GetVar();
+			const v3 = p._GetNode(3).GetVar();
+			const v4 = p._GetNode(4).GetVar();
+			return () => f0(and((and("anim_throw_body", v1.GetValue()) + "_"), v2.GetValue()), and((and("anim_throw_special", v3.GetValue()) + "_"), v4.GetValue()));
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() + 160);
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() + 210);
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() - 160);
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() - 210);
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			const v1 = p._GetNode(1).GetVar();
+			const v2 = p._GetNode(2).GetVar();
+			const v3 = p._GetNode(3).GetVar();
+			const v4 = p._GetNode(4).GetVar();
+			const v5 = p._GetNode(5).GetVar();
+			const v6 = p._GetNode(6).GetVar();
+			return () => f0(and((and("anim_takedown_flip", v1.GetValue()) + "_"), v2.GetValue()), and((and("anim_takedown_low", v3.GetValue()) + "_"), v4.GetValue()), and((and("anim_takedown_singleleg", v5.GetValue()) + "_"), v6.GetValue()));
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() + 150);
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() - 150);
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() - 20);
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() + 240);
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() + 20);
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() - 240);
+		},
+		() => "Game - Animations Player 4",
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			const v1 = p._GetNode(1).GetVar();
+			return () => and((and("anim_lose", v0.GetValue()) + "_"), v1.GetValue());
+		},
+		() => "Game - Initial Setup4",
+		() => "Game - Audio4",
+		() => "Game - Character Controls4",
+		() => "Game - Movement Player 5",
+		() => "Game - Compare Positions4",
+		() => "Game - Damage System4",
+		() => "Game - Attack Player 5",
+		() => "Game - Damage (P1 on P2)4",
+		() => "Game - Damage (P2 on P1)4",
+		() => "Game - Camera & HP Bars4",
+		() => "Game - End of Round4",
+		() => "Game - Time Limit4",
+		() => "Game - Progression4",
+		() => "Game - Start of Fight4",
+		() => "Game - Win & Lose4",
+		() => "Game - End of Fight4",
+		() => "Game - Round Sounds4",
+		() => "Game - Fade & Shake Screen4",
+		() => "Game - Animations4",
+		() => "Game - Animations Player 5",
+		() => "Game - Initial Setup13",
+		() => "Game - Audio13",
+		() => "Game - Character Controls13",
+		() => "Game - Movement Player 14",
+		() => "Game - Compare Positions13",
+		() => "Game - Damage System13",
+		() => "Game - Attack Player 14",
+		() => "Game - Damage (P1 on P2)13",
+		() => "Game - Damage (P2 on P1)13",
+		() => "Game - Camera & HP Bars13",
+		() => "Game - End of Round13",
+		() => "Game - Time Limit13",
+		() => "Game - Progression13",
+		() => "Game - Start of Fight13",
+		() => "Game - Win & Lose13",
+		() => "Game - End of Fight13",
+		() => "Game - Round Sounds13",
+		() => "Game - Fade & Shake Screen13",
+		() => "Game - Animations13",
+		() => "Game - Animations Player 14",
+		() => "Game - Initial Setup6",
+		() => "Game - Audio6",
+		() => "Game - Character Controls6",
+		() => "Game - Movement Player 19",
+		() => "Game - Compare Positions6",
+		() => "Game - Damage System6",
+		() => "Game - Attack Player 19",
+		() => "Game - Damage (P1 on P2)6",
+		() => "Game - Damage (P2 on P1)6",
+		() => "Game - Camera & HP Bars6",
+		() => "Game - End of Round6",
+		() => "Game - Time Limit6",
+		() => "Game - Progression6",
+		() => "Game - Start of Fight6",
+		() => "Game - Win & Lose6",
+		() => "Game - End of Fight6",
+		() => "Game - Round Sounds6",
+		() => "Game - Fade & Shake Screen6",
+		() => "Game - Animations6",
+		() => "Game - Animations Player 19",
+		() => "Game - Initial Setup9",
+		() => "Game - Audio9",
+		() => "Game - Character Controls9",
+		() => "Game - Movement Player 10",
+		() => "Game - Compare Positions9",
+		() => "Game - Damage System9",
+		() => "Game - Attack Player 10",
+		() => "Game - Damage (P1 on P2)9",
+		() => "Game - Damage (P2 on P1)9",
+		() => "Game - Camera & HP Bars9",
+		() => "Game - End of Round9",
+		() => "Game - Time Limit9",
+		() => "Game - Progression9",
+		() => "Game - Start of Fight9",
+		() => "Game - Win & Lose9",
+		() => "Game - End of Fight9",
+		() => "Game - Round Sounds9",
+		() => "Game - Fade & Shake Screen9",
+		() => "Game - Animations9",
+		() => "Game - Animations Player 10",
+		() => "Game - Initial Setup5",
+		() => "Game - Audio5",
+		() => "Game - Character Controls5",
+		() => "Game - Movement Player 6",
+		() => "Game - Compare Positions5",
+		() => "Game - Damage System5",
+		() => "Game - Attack Player 6",
+		() => "Game - Damage (P1 on P2)5",
+		() => "Game - Damage (P2 on P1)5",
+		() => "Game - Camera & HP Bars5",
+		() => "Game - End of Round5",
+		() => "Game - Time Limit5",
+		() => "Game - Progression5",
+		() => "Game - Start of Fight5",
+		() => "Game - Win & Lose5",
+		() => "Game - End of Fight5",
+		() => "Game - Round Sounds5",
+		() => "Game - Fade & Shake Screen5",
+		() => "Game - Animations5",
+		() => "Game - Animations Player 6",
+		() => "Game - Initial Setup8",
+		() => "Game - Audio8",
+		() => "Game - Character Controls8",
+		() => "Game - Movement Player 9",
+		() => "Game - Compare Positions8",
+		() => "Game - Damage System8",
+		() => "Game - Attack Player 9",
+		() => "Game - Damage (P1 on P2)8",
+		() => "Game - Damage (P2 on P1)8",
+		() => "Game - Camera & HP Bars8",
+		() => "Game - End of Round8",
+		() => "Game - Time Limit8",
+		() => "Game - Progression8",
+		() => "Game - Start of Fight8",
+		() => "Game - Win & Lose8",
+		() => "Game - End of Fight8",
+		() => "Game - Round Sounds8",
+		() => "Game - Fade & Shake Screen8",
+		() => "Game - Animations8",
+		() => "Game - Animations Player 9",
+		() => "Game - Initial Setup12",
+		() => "Game - Audio12",
+		() => "Game - Character Controls12",
+		() => "Game - Movement Player 13",
+		() => "Game - Compare Positions12",
+		() => "Game - Damage System12",
+		() => "Game - Attack Player 13",
+		() => "Game - Damage (P1 on P2)12",
+		() => "Game - Damage (P2 on P1)12",
+		() => "Game - Camera & HP Bars12",
+		() => "Game - End of Round12",
+		() => "Game - Time Limit12",
+		() => "Game - Progression12",
+		() => "Game - Start of Fight12",
+		() => "Game - Win & Lose12",
+		() => "Game - End of Fight12",
+		() => "Game - Round Sounds12",
+		() => "Game - Fade & Shake Screen12",
+		() => "Game - Animations12",
+		() => "Game - Animations Player 13",
+		() => "Game - Initial Setup17",
+		() => "Game - Audio17",
+		() => "Game - Character Controls17",
+		() => "Game - Movement Player 18",
+		() => "Game - Compare Positions17",
+		() => "Game - Damage System17",
+		() => "Game - Attack Player 18",
+		() => "Game - Damage (P1 on P2)17",
+		() => "Game - Damage (P2 on P1)17",
+		() => "Game - Camera & HP Bars17",
+		() => "Game - End of Round17",
+		() => "Game - Time Limit17",
+		() => "Game - Progression17",
+		() => "Game - Start of Fight17",
+		() => "Game - Win & Lose17",
+		() => "Game - End of Fight17",
+		() => "Game - Round Sounds17",
+		() => "Game - Fade & Shake Screen17",
+		() => "Game - Animations17",
+		() => "Game - Animations Player 18",
+		() => "Game - Initial Setup15",
+		() => "Game - Audio15",
+		() => "Game - Character Controls15",
+		() => "Game - Movement Player 16",
+		() => "Game - Compare Positions15",
+		() => "Game - Damage System15",
+		() => "Game - Attack Player 16",
+		() => "Game - Damage (P1 on P2)15",
+		() => "Game - Damage (P2 on P1)15",
+		() => "Game - Camera & HP Bars15",
+		() => "Game - End of Round15",
+		() => "Game - Time Limit15",
+		() => "Game - Progression15",
+		() => "Game - Start of Fight15",
+		() => "Game - Win & Lose15",
+		() => "Game - End of Fight15",
+		() => "Game - Round Sounds15",
+		() => "Game - Fade & Shake Screen15",
+		() => "Game - Animations15",
+		() => "Game - Animations Player 16",
+		() => "Game - Initial Setup16",
+		() => "Game - Audio16",
+		() => "Game - Character Controls16",
+		() => "Game - Movement Player 17",
+		() => "Game - Compare Positions16",
+		() => "Game - Damage System16",
+		() => "Game - Attack Player 17",
+		() => "Game - Damage (P1 on P2)16",
+		() => "Game - Damage (P2 on P1)16",
+		() => "Game - Camera & HP Bars16",
+		() => "Game - End of Round16",
+		() => "Game - Time Limit16",
+		() => "Game - Progression16",
+		() => "Game - Start of Fight16",
+		() => "Game - Win & Lose16",
+		() => "Game - End of Fight16",
+		() => "Game - Round Sounds16",
+		() => "Game - Fade & Shake Screen16",
+		() => "Game - Animations16",
+		() => "Game - Animations Player 17",
+		() => "Game - Initial Setup11",
+		() => "Game - Audio11",
+		() => "Game - Character Controls11",
+		() => "Game - Movement Player 12",
+		() => "Game - Compare Positions11",
+		() => "Game - Damage System11",
+		() => "Game - Attack Player 12",
+		() => "Game - Damage (P1 on P2)11",
+		() => "Game - Damage (P2 on P1)11",
+		() => "Game - Camera & HP Bars11",
+		() => "Game - End of Round11",
+		() => "Game - Time Limit11",
+		() => "Game - Progression11",
+		() => "Game - Start of Fight11",
+		() => "Game - Win & Lose11",
+		() => "Game - End of Fight11",
+		() => "Game - Round Sounds11",
+		() => "Game - Fade & Shake Screen11",
+		() => "Game - Animations11",
+		() => "Game - Animations Player 12",
+		() => "Game - Initial Setup14",
+		() => "Game - Audio14",
+		() => "Game - Character Controls14",
+		() => "Game - Movement Player 15",
+		() => "Game - Compare Positions14",
+		() => "Game - Damage System14",
+		() => "Game - Attack Player 15",
+		() => "Game - Damage (P1 on P2)14",
+		() => "Game - Damage (P2 on P1)14",
+		() => "Game - Camera & HP Bars14",
+		() => "Game - End of Round14",
+		() => "Game - Time Limit14",
+		() => "Game - Progression14",
+		() => "Game - Start of Fight14",
+		() => "Game - Win & Lose14",
+		() => "Game - End of Fight14",
+		() => "Game - Round Sounds14",
+		() => "Game - Fade & Shake Screen14",
+		() => "Game - Animations14",
+		() => "Game - Animations Player 15",
+		() => "Game - Initial Setup10",
+		() => "Game - Audio10",
+		() => "Game - Character Controls10",
+		() => "Game - Movement Player 11",
+		() => "Game - Compare Positions10",
+		() => "Game - Damage System10",
+		() => "Game - Attack Player 11",
+		() => "Game - Damage (P1 on P2)10",
+		() => "Game - Damage (P2 on P1)10",
+		() => "Game - Camera & HP Bars10",
+		() => "Game - End of Round10",
+		() => "Game - Time Limit10",
+		() => "Game - Progression10",
+		() => "Game - Start of Fight10",
+		() => "Game - Win & Lose10",
+		() => "Game - End of Fight10",
+		() => "Game - Round Sounds10",
+		() => "Game - Fade & Shake Screen10",
+		() => "Game - Animations10",
+		() => "Game - Animations Player 11",
+		() => "Game - Initial Setup7",
+		() => "Game - Audio7",
+		() => "Game - Character Controls7",
+		() => "Game - Movement Player 8",
+		() => "Game - Compare Positions7",
+		() => "Game - Damage System7",
+		() => "Game - Attack Player 8",
+		() => "Game - Damage (P1 on P2)7",
+		() => "Game - Damage (P2 on P1)7",
+		() => "Game - Camera & HP Bars7",
+		() => "Game - End of Round7",
+		() => "Game - Time Limit7",
+		() => "Game - Progression7",
+		() => "Game - Start of Fight7",
+		() => "Game - Win & Lose7",
+		() => "Game - End of Fight7",
+		() => "Game - Round Sounds7",
+		() => "Game - Fade & Shake Screen7",
+		() => "Game - Animations7",
+		() => "Game - Animations Player 8",
+		() => "Game - Initial Setup3",
+		() => "Game - Audio3",
+		() => "Game - Character Controls3",
+		() => "Game - Movement Player 7",
+		() => "Game - Compare Positions3",
+		() => "Game - Damage System3",
+		() => "Game - Attack Player 7",
+		() => "Game - Damage (P1 on P2)3",
+		() => "Game - Damage (P2 on P1)3",
+		() => "Game - Camera & HP Bars3",
+		() => "Game - End of Round3",
+		() => "Game - Time Limit3",
+		() => "Game - Progression3",
+		() => "Game - Start of Fight3",
+		() => "Game - Win & Lose3",
+		() => "Game - End of Fight3",
+		() => "Game - Round Sounds3",
+		() => "Game - Fade & Shake Screen3",
+		() => "Game - Animations3",
+		() => "Game - Animations Player 7"
 ];
 
 
